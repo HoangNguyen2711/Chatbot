@@ -16,6 +16,8 @@ nlu:
     - goodmorning
     - goodevening
     - good afternoon
+    - hi [John](name)
+    
 
 - intent: goodbye
   examples: |
@@ -89,3 +91,15 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+
+- intent: buy_product
+  examples: |
+      - i want to order [guitar](product)
+      - want to order [guitar](product)
+      - want to order [bass](product)
+      - get me a [guitar](product)
+      - need to buy [guitar](product) please
+      - want to purchase me [drum](product) pls
+
+
+      
