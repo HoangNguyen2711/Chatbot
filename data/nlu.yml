@@ -16,9 +16,7 @@ nlu:
     - goodmorning
     - goodevening
     - good afternoon
-    - hi [John](name)
-    
-
+  
 - intent: goodbye
   examples: |
     - cu
@@ -67,6 +65,8 @@ nlu:
     - so so perfect
     - so good
     - so perfect
+    - yay
+    - yeah
 
 - intent: mood_unhappy
   examples: |
@@ -94,12 +94,180 @@ nlu:
 
 - intent: buy_product
   examples: |
-      - i want to order [guitar](product)
-      - want to order [guitar](product)
-      - want to order [bass](product)
-      - get me a [guitar](product)
-      - need to buy [guitar](product) please
-      - want to purchase me [drum](product) pls
+    - i want to order [guitar](product)
+    - want to order [guitar](product)
+    - want to order [bass](product)
+    - get me a [guitar](product)
+    - need to buy [guitar](product) please
+    - want to purchase me [drum](product) pls
+
+- intent: help
+  examples: |
+    - I need a hand
+    - I need help
+    - I need some help
+    - I need you help me now
+    - I need you right now
+    - I need you to do something for me
+    - I need you to help me
+    - I need your help
+    - I want your help
+    - are you going to help me
+    - assist
+    - assist me
+    - assistance
+    - can help me
+    - can u help me
+    - can you assist me
+    - could you give me a hand
+    - do me a favor
+    - do you help me
+    - do you want to help me
+    - help
+    - help me
+    - help me out
+    - help me with a problem
+    - help me with that
+    - help us
+    - need help
+    - need your help
+    - please help me
+    - sos
+    - will you help me
+    - would you help me
+    - you can help me help me with something
+    - you help me
+
+- intent: shop_address
+  examples: |
+    - what's your address
+    - what's your location
+    - what's your locate
+    - where are you
+    - Where are you from
+    - where you at
+
+- intent: shop_mail 
+  examples: |
+    - what's your email
+    - can i have your email
+    - what's your mail
+    - email
+
+- intent: register_account
+  examples: |
+    - I want to sign up
+    - How to sign up
+    - I want to create an account
+    - Where to sign up
+    - register an account
+    - set up an account
+
+
+- intent: payment_methods
+  examples: |
+    - What kind of payment method do you accept
+    - I want to pay
+    - How to pay
+    - How can I pay
+    - Where can I pay
+
+- intent: ship_fee
+  examples: |
+    - What's your shipping cost
+    - What's your shipping fee
+    - How much does it cost to ship to [Florida](address)
+    - What's the price of shipping to [Florida](address)
+
+- intent: product_category
+  examples: |
+    - I need a list of [Guitar](category)
+    - What kind of [Guitar](category) do you have
+    - Give me a category of [Guitar](category)
+
+
+- intent: promotion
+  examples: |
+    - Is there any sale  at the [moment](time)
+    - What's your promotions
+    - Is there any promotions at the [moment](time)
+
+- intent: thanks
+  examples: |
+    - Amazing service
+    - Cool. Thank you. I really like what you're doing.
+    - I appreciate it
+    - I appreciate your help
+    - I thank you
+    - It's appreciated
+    - Thanks for the help!
+    - alright thank you
+    - alright thanks
+    - appreciate all the help
+    - appreciate your help
+    - awesome service
+    - cheers
+    - good thanks
+    - great thank you
+    - many thanks
+    - much appreciated
+    - much thanks
+    - nice thank you
+    - no thank you that's all
+    - ok thx
+    - perfect thank you
+    - so nice of you
+    - sure, np. thanks!
+    - terrific thank you
+    - thank you
+    - thank you again
+    - thank you for your help
+    - thank you my friend
+    - thank you so much
+    - thank you that will be all
+    - thanks
+    - thanks a lot
+    - thanks again
+    - thanks buddy
+    - thanks for your help
+    - thanks love
+    - thanks so much
+    - thanx
+    - that's appreciated
+    - thnx
+    - thx
+    - thx for your help
+    - tnx
+    - ty
+    - very good thank you
+    - well thank you
+    - well thanks
+    - you helped a lot thank you
+
+- intent: product_price
+  examples: |
+    - How much does this product cost?
+    - What's the price of this product?
+    - How Much Is This?
+    - How Much Are These?
+    - How Much Does This Cost?
+    - What Is the Price of This?
+    - What Is the Asking Price of This?
+    - How Much Is the Cost of This?
+    - Do You Know How Much It Costs?
+    - Would You Please Tell Me the Price of This?
+    - Would You Please Check the Price of This for Me?
+    - Would You Mind Telling Me the Price of This?
+    - How Much Did It Cost?
+
+- intent: return
+  examples: |
+    - What's the return policy?
+    - How can I return this product?
+    - How to return this product
+    - I want to return this product
+    - Tell me about your return policy
+    - I want to send it back
 
 
       

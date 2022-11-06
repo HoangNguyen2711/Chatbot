@@ -8,10 +8,25 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
+  - buy_product
+  - help
+  - shop_address
+  - shop_mail
+  - register_account
+  - payment_methods
+  - ship_fee
+  - product_category
+  - promotion
+  - thanks
+  - product_price
+  - return
 
 responses:
   utter_greet:
   - text: "Hey! How are you?"
+  - text: "Hi, GuitarStore here"
+  - text: "It's nice to meet you"
+  - text: "Good morning! Welcome to GuitarStore. How can I help you"
 
   utter_cheer_up:
   - text: "Here is something to cheer you up:"
@@ -25,9 +40,76 @@ responses:
 
   utter_goodbye:
   - text: "Bye"
+  - text: "Goodbye"
 
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
+
+  utter_buy_product:
+  - text: "Yes, we have"
+  - text: "Okay, you can visit our website"
+
+  utter_help:
+  - text: "Yes, we are here for you"
+  - text: "We were here"
+  - text: "Of course"
+
+  utter_shop_address:
+  - text: "Our shop is in CanTho"
+  - text: "You can see it in bottom of website, CanTho"
+  - text: "We locate in CanTho"
+
+  utter_shop_mail:
+  - text: "Yeah, it's ourshop@gmail.com"
+  - text: "O U R S H O P @ G M A I L . C O M"
+  - text: "You can see it in bottom website, ourshop@gmail.com"
+
+  utter_register_account:
+  - text: "You can go to our website and click on Register button"
+  - text: "You follow here"
+  - text: "Click on Register button"
+
+  utter_payment_methods:
+  - text: "We have COD and via VNPAY"
+  - text: "You want to purchase through VNPAY or COD"
+  - text: "We 2 two method: VNPAY and COD"
+
+  utter_ship_fee:
+  - text: "We can see it in order page"
+
+  utter_thanks:
+  - text: "You're welcome"
+  - text: "It's my pleasure"
+
+  utter_product_price:
+  - text: "You can check this in the website"
+  - text: "It's display in the website"
+
+  utter_return:
+  - text: "Yes, you can check this here"
+  - text: "You can, check this"
+
+  utter_unclear:
+  - text: "Sorry! I can't understand"
+
+actions:
+  - utter_greet
+  - utter_cheer_up
+  - utter_did_that_help
+  - utter_happy
+  - utter_goodbye
+  - utter_iamabot
+  - utter_buy_product
+  - utter_help
+  - utter_shop_address
+  - utter_shop_mail
+  - utter_register_account
+  - utter_payment_methods
+  - utter_ship_fee
+  - utter_thanks
+  - utter_product_price
+  - utter_return
+  - utter_unclear
 
 session_config:
   session_expiration_time: 60

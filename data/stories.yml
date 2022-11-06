@@ -28,3 +28,64 @@ stories:
   - action: utter_did_that_help
   - intent: deny
   - action: utter_goodbye
+
+- story: goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: bot_challenge
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- story: buy product
+  steps:
+  - intent: buy_product
+  - action: utter_buy_product
+
+- story: help
+  steps:
+  - intent: help
+  - action: utter_help
+
+- story: address
+  steps:
+  - intent: shop_address
+  - action: utter_shop_address
+
+- story: email
+  steps:
+  - intent: shop_mail
+  - action: utter_shop_mail
+
+- story: register
+  steps:
+  - intent: register_account
+  - action: utter_register_account
+
+- story: payment
+  steps:
+  - intent: payment_methods
+  - action: utter_payment_methods
+
+- story: shipping
+  steps:
+  - intent: ship_fee
+  - action: utter_ship_fee
+
+- story: thanks
+  steps:
+  - intent: thanks
+  - action: utter_thanks
+
+- story: price
+  steps:
+  - intent: product_price
+  - action: utter_product_price
+
+- story: return
+  steps:
+  - intent: return
+  - action: utter_return
+
