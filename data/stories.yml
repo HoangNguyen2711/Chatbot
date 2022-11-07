@@ -89,3 +89,8 @@ stories:
   - intent: return
   - action: utter_return
 
+- story: weather
+  steps:
+  - intent: weather
+  - action: action_weather
+

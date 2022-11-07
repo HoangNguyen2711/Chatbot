@@ -269,5 +269,11 @@ nlu:
     - Tell me about your return policy
     - I want to send it back
 
+- intent: weather
+  examples: |
+    - What's the weather today?
+    - Is it rain?
+    - Weather forecast?
+
 
       

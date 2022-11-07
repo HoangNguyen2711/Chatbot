@@ -20,6 +20,7 @@ intents:
   - thanks
   - product_price
   - return
+  - weather
 
 responses:
   utter_greet:
@@ -110,6 +111,7 @@ actions:
   - utter_product_price
   - utter_return
   - utter_unclear
+  - action_weather
 
 session_config:
   session_expiration_time: 60
