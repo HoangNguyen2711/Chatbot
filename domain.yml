@@ -21,6 +21,7 @@ intents:
   - product_price
   - return
   - weather
+  - news
 
 responses:
   utter_greet:
@@ -111,7 +112,10 @@ actions:
   - utter_product_price
   - utter_return
   - utter_unclear
+  - action_hello
   - action_weather
+  - action_news
+  - action_coupon
 
 session_config:
   session_expiration_time: 60

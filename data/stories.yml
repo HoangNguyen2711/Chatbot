@@ -94,3 +94,14 @@ stories:
   - intent: weather
   - action: action_weather
 
+- story: news
+  steps:
+  - intent: news
+  - action: action_news
+
+- story: promotion
+  steps:
+  - intent: promotion
+  - action: action_coupon
+
+

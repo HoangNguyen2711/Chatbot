@@ -94,12 +94,15 @@ nlu:
 
 - intent: buy_product
   examples: |
-    - i want to order [guitar](product)
-    - want to order [guitar](product)
-    - want to order [bass](product)
-    - get me a [guitar](product)
-    - need to buy [guitar](product) please
-    - want to purchase me [drum](product) pls
+    - i want to order guitar
+    - want to order guitar
+    - want to order bass
+    - get me a guitar
+    - need to buy guitar please
+    - want to purchase me buy pls
+    - buy guitar
+    - find guitar
+    - guitar
 
 - intent: help
   examples: |
@@ -188,9 +191,13 @@ nlu:
 
 - intent: promotion
   examples: |
-    - Is there any sale  at the [moment](time)
+    - Is there any sale?
     - What's your promotions
-    - Is there any promotions at the [moment](time)
+    - Is there any promotions?
+    - Do you have a discount code?
+    - Do you have coupon?
+    - Is there a discount on the product?
+    - Are there any promotions?
 
 - intent: thanks
   examples: |
@@ -275,5 +282,9 @@ nlu:
     - Is it rain?
     - Weather forecast?
 
+- intent: news
+  examples: |
+    - What's news?
+    - GuitarWorld?
+    - News?
 
-      
