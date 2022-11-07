@@ -94,15 +94,15 @@ nlu:
 
 - intent: buy_product
   examples: |
-    - i want to order guitar
-    - want to order guitar
-    - want to order bass
-    - get me a guitar
-    - need to buy guitar please
+    - i want to order 
+    - want to order 
+    - want to order 
+    - get me a 
+    - need to buy  please
     - want to purchase me buy pls
-    - buy guitar
-    - find guitar
-    - guitar
+    - buy 
+
+ 
 
 - intent: help
   examples: |
@@ -184,9 +184,9 @@ nlu:
 
 - intent: product_category
   examples: |
-    - I need a list of [Guitar](category)
-    - What kind of [Guitar](category) do you have
-    - Give me a category of [Guitar](category)
+    - I need a list of category
+    - What kind of category 
+    - Give me a category of category
 
 
 - intent: promotion
@@ -194,8 +194,8 @@ nlu:
     - Is there any sale?
     - What's your promotions
     - Is there any promotions?
-    - Do you have a discount code?
-    - Do you have coupon?
+    - a discount code?
+    - coupon?
     - Is there a discount on the product?
     - Are there any promotions?
 
@@ -288,3 +288,20 @@ nlu:
     - GuitarWorld?
     - News?
 
+- intent: product_detail
+  examples: |
+    - Do you have [abc](product_name) guitar?
+    - I want this [abc](product_name) guitar?
+    - Your store have [abcxyz](product_name) guitar?
+    - [Super](product_name) guitar?
+    - [Legator](product_name) guitar?
+    - [Alvarez](product_name) guitar?
+    - [Kramer](product_name) guitar?
+    - [G&L CLF](product_name) guitar?
+    - [Hofner](product_name) guitar?
+    - [Gold Tone](product_name) guitar?
+    - [Mitchell](product_name) guitar?
+    - [nothing](product_name) guitar?
+    - [abc](product_name) guitar?
+    - Your shop have [abc](product_name) guitar?
+    - I want [abcxyz](product_name) guitar

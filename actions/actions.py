@@ -40,7 +40,7 @@ class Hello(Action):
 
         return []
 
-class ask_weather(Action):
+class weather(Action):
     def name(self) -> Text:
         return "action_weather"
     def run(self, dispatcher: CollectingDispatcher,
@@ -48,9 +48,9 @@ class ask_weather(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         print('[%s] <- %s' % (self.name(), tracker.latest_message['text']))
         headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3', 'Accept-Language': 'en'}
-        city= 'cantho'
+        city= 'vinhlong'
         city = city+'+weather'
-        res = requests.get(f'https://www.google.com/search?q={city}&oq={city}&aqs=chrome.0.35i39l2j0l4j46j69i60.6128j1j7&sourceid=chrome&ie=UTF-8', headers=headers)
+        res = requests.get(f'https://www.google.com/search?q={city}&source=hp&ei=m9FoY9OeN5X6hwPOp4foCw&iflsig=AJiK0e8AAAAAY2jfq4ljjsXUXSHyFGtYeAohoPIzZK95&ved=0ahUKEwiT2ITD4pv7AhUV_WEKHc7TAb0Q4dUDCAg&uact=5&oq=cantho&gs_lp=Egdnd3Mtd2l6uAED-AEBMgcQLhiABBgKMgsQLhiABBjHARivATILEC4YgAQYxwEYrwEyDRAuGIAEGMcBGK8BGAoyBRAAGIAEMgcQLhiABBgKMgsQLhiABBjHARivATIFEAAYgAQyBRAAGIAEMgUQABiABMICCBAAGLEDGIMBwgIIEC4YsQMYgwHCAgUQLhiABMICBRAAGLEDwgIKEC4YgAQY1AIYCqgCAEjgClCXAliOB3ABeADIAQCQAQCYAcwBoAHSBqoBBTAuNS4x&sclient=gws-wiz', headers=headers)
         soup = BeautifulSoup(res.text, 'html.parser')
         location = soup.select('#wob_loc')[0].getText().strip()
         time = soup.select('#wob_dts')[0].getText().strip()
@@ -68,16 +68,16 @@ class news(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        url =  'https://www.guitarworld.com/news'
-        page = urllib.request.urlopen(url)
-        soup = BeautifulSoup(page, 'html.parser')
-        new_feeds = soup.find('div', class_='content').find_all('h3', class_='article-name')
-        dispatcher.utter_message('Latest news from Guitarworld:')
-        for feed in list(new_feeds):
-            feed_result= feed.find('a')
-            title = feed_result.contents[0]
-            link = feed_result.get('href')
-            dispatcher.utter_message('{} \nMore: {}'.format(title, url+link))
+            url =  'https://guitar.com/news/'
+
+            page = urllib.request.urlopen(url)
+
+            soup = BeautifulSoup(page, 'html.parser')
+            new_feeds = soup.find('h3',class_='entry-title td-module-title').find_all('a')
+            for feed in new_feeds:
+                title = feed.get('title')
+                link = feed.get('href')
+                dispatcher.utter_message('Latest news from guitar.com: {} - Link: {}'.format(title, link))
 
 
 class Coupon(Action):
@@ -93,9 +93,53 @@ class Coupon(Action):
         myresult = cur.fetchall()
 
         if len(myresult) >= 1:
-            dispatcher.utter_message("We have: ")
+            dispatcher.utter_message("We have these coupons: ")
             for x in myresult:
                 dispatcher.utter_message(x[0]+' ' + str(int(x[1])) +'%')
         else:
             dispatcher.utter_message("There are no promotions at the moment!")
 
+def listToString(s):
+   
+    str1 = " "
+   
+    return (str1.join(s))
+
+class Category(Action):
+
+    def name(self) -> Text:
+        return "action_category"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        cur = mydb.cursor()
+        cur.execute("SELECT name FROM categories WHERE parent_id is not null")
+        myresult = cur.fetchall()
+
+        dispatcher.utter_message("We have these categories: ")
+        for x in myresult:
+            dispatcher.utter_message(listToString(x))
+
+class ProductDetail(Action):
+
+    def name(self) -> Text:
+        return "action_product_name"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        product_name = tracker.get_slot("product_detail")
+        cur = mydb.cursor()
+        sql='SELECT * FROM products WHERE name LIKE %s'
+        args=['%'+product_name+'%']
+        cur.execute(sql,args)
+        myresult = cur.fetchall()
+
+        if len(myresult) >= 1:
+            dispatcher.utter_message("We have these model: ")
+            for x in myresult:
+                dispatcher.utter_message(x[1])
+        else:
+            dispatcher.utter_message("We dont have it :(")
+        

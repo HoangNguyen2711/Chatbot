@@ -104,4 +104,14 @@ stories:
   - intent: promotion
   - action: action_coupon
 
+- story: product_detail
+  steps:
+  - intent: product_detail
+  - action: action_product_name
+
+- story: category
+  steps:
+  - intent: product_category
+  - action: action_category
+    
 

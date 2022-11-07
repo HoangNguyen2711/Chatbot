@@ -22,6 +22,18 @@ intents:
   - return
   - weather
   - news
+  - product_detail
+
+entities:
+  - product_name
+
+slots:
+  product_detail:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: product_name
 
 responses:
   utter_greet:
@@ -116,6 +128,8 @@ actions:
   - action_weather
   - action_news
   - action_coupon
+  - action_product_name
+  - action_category
 
 session_config:
   session_expiration_time: 60
