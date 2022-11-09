@@ -39,11 +39,6 @@ stories:
   - intent: bot_challenge
   - action: utter_iamabot
 
-- story: buy product
-  steps:
-  - intent: buy_product
-  - action: utter_buy_product
-
 - story: help
   steps:
   - intent: help
@@ -114,4 +109,7 @@ stories:
   - intent: product_category
   - action: action_category
     
-
+- story: material
+  steps:
+  - intent: material
+  - action: utter_material

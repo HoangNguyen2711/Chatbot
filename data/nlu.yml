@@ -92,18 +92,6 @@ nlu:
     - am I talking to a bot?
     - am I talking to a human?
 
-- intent: buy_product
-  examples: |
-    - i want to order 
-    - want to order 
-    - want to order 
-    - get me a 
-    - need to buy  please
-    - want to purchase me buy pls
-    - buy 
-
- 
-
 - intent: help
   examples: |
     - I need a hand
@@ -143,28 +131,39 @@ nlu:
 
 - intent: shop_address
   examples: |
-    - what's your address
-    - what's your location
-    - what's your locate
-    - where are you
-    - Where are you from
-    - where you at
+    - address
+    - location
+    - locate
+    - where are you?
+    - Where are you from?
+    - where you at?
+    - maps
+    - home
+    - street
+    - places of business
+    - place of residence
 
 - intent: shop_mail 
   examples: |
-    - what's your email
+    - your email
     - can i have your email
     - what's your mail
     - email
+    - gmail
+    - communication
+    - air mail
+    - post office
+    - postal
 
 - intent: register_account
   examples: |
-    - I want to sign up
+    - sign up
     - How to sign up
-    - I want to create an account
+    - create an account
     - Where to sign up
     - register an account
     - set up an account
+    - registry
 
 
 - intent: payment_methods
@@ -174,30 +173,40 @@ nlu:
     - How to pay
     - How can I pay
     - Where can I pay
+    - payment
+    - paid
+    - cash
+    - deposit
 
 - intent: ship_fee
   examples: |
-    - What's your shipping cost
-    - What's your shipping fee
-    - How much does it cost to ship to [Florida](address)
-    - What's the price of shipping to [Florida](address)
+    - shipping cost
+    - shipping fee
+    - How much does it cost to ship to 
+    - price of shipping to 
 
 - intent: product_category
   examples: |
     - I need a list of category
     - What kind of category 
     - Give me a category of category
-
+    - class
+    - division
+    - grade
+    - kind
+    - group
+    - list
+    - level
 
 - intent: promotion
   examples: |
     - Is there any sale?
-    - What's your promotions
+    - your promotions
     - Is there any promotions?
     - a discount code?
     - coupon?
-    - Is there a discount on the product?
-    - Are there any promotions?
+    - discount on the product?
+    - any promotions?
 
 - intent: thanks
   examples: |
@@ -254,39 +263,49 @@ nlu:
 - intent: product_price
   examples: |
     - How much does this product cost?
-    - What's the price of this product?
+    - the price of this product
     - How Much Is This?
     - How Much Are These?
-    - How Much Does This Cost?
+    - This Cost?
     - What Is the Price of This?
-    - What Is the Asking Price of This?
-    - How Much Is the Cost of This?
-    - Do You Know How Much It Costs?
-    - Would You Please Tell Me the Price of This?
-    - Would You Please Check the Price of This for Me?
-    - Would You Mind Telling Me the Price of This?
-    - How Much Did It Cost?
+    - Price of This?
+    - the Cost of This?
+    - How Much It Costs?
+    - Tell Me the Price of This?
+    - Check the Price of This for Me?
+    - Price of this?
+    - It cost?
+    - Bill
 
 - intent: return
   examples: |
-    - What's the return policy?
-    - How can I return this product?
-    - How to return this product
-    - I want to return this product
+    - return policy?
+    - return this product?
+    - How to return?
+    - my money back
     - Tell me about your return policy
-    - I want to send it back
+    - send it back
 
 - intent: weather
   examples: |
-    - What's the weather today?
-    - Is it rain?
-    - Weather forecast?
+    - weather today?
+    - raining
+    - weather forecast?
+    - temperature
+    - come into the store
+    - go to the store
+    - climate
 
 - intent: news
   examples: |
     - What's news?
     - GuitarWorld?
     - News?
+    - Broadcast
+    - Rumor
+    - Statement
+    - Report
+    - Discovery
 
 - intent: product_detail
   examples: |
@@ -305,3 +324,15 @@ nlu:
     - [abc](product_name) guitar?
     - Your shop have [abc](product_name) guitar?
     - I want [abcxyz](product_name) guitar
+    - Your store have [abcxyz](product_name) model?
+
+- intent: material
+  examples: |
+    - material
+    - made of
+    - wood
+    - string
+    - body
+  
+
+

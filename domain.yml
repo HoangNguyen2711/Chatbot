@@ -8,7 +8,6 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
-  - buy_product
   - help
   - shop_address
   - shop_mail
@@ -23,6 +22,7 @@ intents:
   - weather
   - news
   - product_detail
+  - material
 
 entities:
   - product_name
@@ -40,17 +40,20 @@ responses:
   - text: "Hey! How are you?"
   - text: "Hi, GuitarStore here"
   - text: "It's nice to meet you"
-  - text: "Good morning! Welcome to GuitarStore. How can I help you"
+  - text: "Welcome to GuitarStore?. How can I help you"
 
   utter_cheer_up:
   - text: "Here is something to cheer you up:"
     image: "https://i.imgur.com/nGF1K8f.jpg"
+  - text: "I'm sorry to hear that, how may I help you?"
 
   utter_did_that_help:
   - text: "Did that help you?"
+  - text: "Is that what you're looking for?"
 
   utter_happy:
   - text: "Great, carry on!"
+  - text: "Wonderful, is there anything else I can help you with?"
 
   utter_goodbye:
   - text: "Bye"
@@ -59,19 +62,16 @@ responses:
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
 
-  utter_buy_product:
-  - text: "Yes, we have"
-  - text: "Okay, you can visit our website"
-
   utter_help:
-  - text: "Yes, we are here for you"
-  - text: "We were here"
-  - text: "Of course"
+  - text: "Yes, I am here for you"
+  - text: "Hi there, how may I assist you today?"
+  - text: "Hello, how may I help you?"
+  - text: "Hello, what do you need help with?"
 
   utter_shop_address:
-  - text: "Our shop is in CanTho"
-  - text: "You can see it in bottom of website, CanTho"
-  - text: "We locate in CanTho"
+  - text: "Our shop is in Vinh Long"
+  - text: "You can see it in bottom of website, Vinh Long"
+  - text: "We located in Vinh Long"
 
   utter_shop_mail:
   - text: "Yeah, it's ourshop@gmail.com"
@@ -80,31 +80,35 @@ responses:
 
   utter_register_account:
   - text: "You can go to our website and click on Register button"
-  - text: "You follow here"
-  - text: "Click on Register button"
+  - text: "Please go to our homepage, then click on Register"
+  - text: "Here the link to register: "
 
   utter_payment_methods:
   - text: "We have COD and via VNPAY"
-  - text: "You want to purchase through VNPAY or COD"
-  - text: "We 2 two method: VNPAY and COD"
+  - text: "There are 2 payment methods: COD and VNPAY"
+  - text: "We have two method: VNPAY and COD"
+  - text: "You can pay via COD or VNPAY"
 
   utter_ship_fee:
-  - text: "We can see it in order page"
+  - text: "You can see it in place order page"
+  - text: "Hello, your shipping fee will vary based on your address, please check out our shipping policy for more details."
 
   utter_thanks:
   - text: "You're welcome"
   - text: "It's my pleasure"
+  - text: "I'm glad I could help you today"
 
   utter_product_price:
-  - text: "You can check this in the website"
-  - text: "It's display in the website"
+  - text: "You can check the price on our product page"
 
   utter_return:
-  - text: "Yes, you can check this here"
-  - text: "You can, check this"
+  - text: "45 Day Satisfaction Guarantee - Limitations and Exceptions Apply. Our goal is your total satisfaction.If you are not satisfied, neither are we. If for any reason you are not completely satisfied with your purchase, simply return it in its original condition within the return period and we will give you a full refund of the purchase price, excluding shipping and handling charges"
 
-  utter_unclear:
-  - text: "Sorry! I can't understand"
+  utter_material:
+  - text: "You can check the product description on the product detail page"
+
+  utter_please_rephrase:
+  - text: I'm sorry, I didn't quite understand that. Could you rephrase?
 
 actions:
   - utter_greet
@@ -113,7 +117,6 @@ actions:
   - utter_happy
   - utter_goodbye
   - utter_iamabot
-  - utter_buy_product
   - utter_help
   - utter_shop_address
   - utter_shop_mail
@@ -123,7 +126,8 @@ actions:
   - utter_thanks
   - utter_product_price
   - utter_return
-  - utter_unclear
+  - utter_material
+  - utter_please_rephrase
   - action_hello
   - action_weather
   - action_news
